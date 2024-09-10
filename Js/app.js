@@ -110,7 +110,7 @@
 
 let generacion;
 
-generacion = prompt("Ingresa tú edad");
+generacion = prompt("¿De que Generación Eres?");
 
 if (generacion <= 1900){
     console.log("Eres de la Generación Perdida")
