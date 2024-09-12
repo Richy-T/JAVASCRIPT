@@ -168,30 +168,62 @@
             Libra Esterlina 5601
             */
 
-let divisa = parseInt(prompt("ingresa tu dinero en pesos"));
+// let divisa = parseInt(prompt("ingresa tu dinero en pesos"));
 
-let moneda = parseInt(
-    prompt("Escoge la divida a convertir 1: Dolar, 2: Euro, 3: Libra Esterlina"));
+// let moneda = parseInt(
+//     prompt("Escoge la divida a convertir 1: Dolar, 2: Euro, 3: Libra Esterlina"));
 
-let Dolar = 4280;
-let Euro = 4728;
-let LibraEsterlina = 5601;
+// let Dolar = 4280;
+// let Euro = 4728;
+// let LibraEsterlina = 5601;
 
 
-switch (moneda) {
+// switch (moneda) {
 
-    case 1:
-        console.log(`Tu conversión en Dolares es de: $ ${divisa / Dolar}`);
-        break;
-    case 2:
-        console.log(`Tu conversión en Euros es de: $ ${divisa / Euro}`);
-        break;
-    case 3:
-        console.log(`Tu conversión en Libras Esterlinas es de: $ ${divisa / LibraEsterlina}`);
-        break;
+//     case 1:
+//         console.log(`Tu conversión en Dolares es de: $ ${divisa / Dolar}`);
+//         break;
+//     case 2:
+//         console.log(`Tu conversión en Euros es de: $ ${divisa / Euro}`);
+//         break;
+//     case 3:
+//         console.log(`Tu conversión en Libras Esterlinas es de: $ ${divisa / LibraEsterlina}`);
+//         break;
 
-    default:
-        console.log("Escoge una Opción correcta");
-        break;
+//     default:
+//         console.log("Escoge una Opción correcta");
+//         break;  
+// }
 
-}
+
+
+        //Estructuras repetitivas jueves 12-09-24
+
+//         for (let i= 3; i<=30; i+=3){ //incremento
+// console.log(i);
+//         }
+
+        // for(let j= 20; j>=1; j-=1){
+        //     console.log(j);
+        // }
+
+// let tabla =4;
+// for (let i =1; i<=10; i++){
+//     console.log(`${tabla} * ${i} =${(tabla*id)}`);
+// }
+//     console.log ("-----------------------")
+
+    //Decremento
+
+    // for(let j= 20; j >=1; j-=2){
+    //     console.log(j);
+    // }
+   
+                //Ejercicio para tablas de multiplicar (Jueves 12_09-24)
+                
+
+    let Tabla;
+    Tabla =parseInt(prompt("Coloca la tabla de multiplicar que quieras"));
+    for(let T = 1; T <= 10; T++){
+        console.log(`${Tabla} * ${T} = ${Tabla*T}`);
+    }
