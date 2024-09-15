@@ -47,7 +47,7 @@
 
 // // 10-09-24, Martes
 
-// // Ingreso de datos pro el Usuario
+// // Ingreso de datos por el Usuario
 
 // // let nu1 = parseInt(prompt(("Ingrese el primer Valor")));
 // // let nu2 = parseInt(prompt(("Ingrese el segundo Valor")));
@@ -222,8 +222,77 @@
                 //Ejercicio para tablas de multiplicar (Jueves 12_09-24)
                 
 
-    let Tabla;
-    Tabla =parseInt(prompt("Coloca la tabla de multiplicar que quieras"));
-    for(let T = 1; T <= 10; T++){
-        console.log(`${Tabla} * ${T} = ${Tabla*T}`);
-    }
+//     let Tabla;
+//     Tabla =parseInt(prompt("Coloca la tabla de multiplicar que quieras"));
+//     for(let T = 1; T <= 10; T++){
+//         console.log(`${Tabla} * ${T} = ${Tabla*T}`);
+//     }
+
+                //Repaso Viernes 13-09-24
+
+
+        // let apell = null;
+        // apell = "Richy";
+        // console.log(apell);
+
+
+            //Casos para trabajar
+
+/*
+let menu = prompt("Escoge que tipo de comida quieres \n carne, pescado, Ensalada").toLowerCase();
+
+
+
+switch (menu) {
+
+    case "carne":
+        console.log("Quieres acompañar tu carne con vino tinto");
+        break;
+    case "pescado":
+        console.log("Quieres acompañar tu pescado con vino Blanco");
+        break;
+    case "ensalada":
+        console.log("¿Quieres acompañar tu Ensalada con Agua?");
+        break;
+
+    default:
+        console.log("elija carne, pescado o ensalada");
+        break;  
+}
+*/
+
+       //ejercicio desarrollado por el Instructor (MAS OPTIMO)
+
+/*
+let menu, bebida;
+switch (menu = prompt("Tipo de menu: Carne, Pescado, Ensalada").toLowerCase()){
+        case "carne":
+                bebida = "Desea beber Vino Tinto";
+                break;
+        case 'pescado':
+                bebida = "Desea beber Vino Blanco";
+                break;
+        case "ensalada":
+                bebida = "Desea beber Agua";
+                break;
+                
+        default: bebida = "Debes elegir entre Carne, Pescado o Ensalada";
+}
+alert(bebida);
+*/
+
+
+let menu = prompt("Tipo de menu: \n Carne, Pescado, Ensalada").toLowerCase();
+switch (menu) {
+        case "carne": console.log (`Ha pedido ${menu}, desea acompañarla con una copa de Vino Tinto`);
+        break;
+        
+        case "pescado": console.log (`Ha pedido ${menu}, desea acompañarlo con una copa de Vino Blanco`);
+        break;
+        
+        case "ensalada": console.log (`Ha pedido ${menu}, desea acompañarla con un vaso de Agua Mineral`);
+        break;
+        
+        default: console.log("Debes elegir entre Carne, Pescado o Ensalada, GRACIAS" );        
+        
+}
