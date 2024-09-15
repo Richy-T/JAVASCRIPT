@@ -161,51 +161,51 @@
 //     default: console.log("Operación NO existe");
 // }
 
-                    // Ejercicio de clase Miércoles-11-09-24 Conversión de divisas
+// Ejercicio de clase Miércoles-11-09-24 Conversión de divisas
 /*
             Dolar 4280
             Euro  4728
             Libra Esterlina 5601
             */
 
-// let divisa = parseInt(prompt("ingresa tu dinero en pesos"));
+/*
+let divisa = parseInt(prompt("ingresa tu dinero en pesos"));
 
-// let moneda = parseInt(
-//     prompt("Escoge la divida a convertir 1: Dolar, 2: Euro, 3: Libra Esterlina"));
+let moneda = parseInt(
+    prompt("Escoge la divida a convertir 1: Dolar, 2: Euro, 3: Libra Esterlina"));
 
-// let Dolar = 4280;
-// let Euro = 4728;
-// let LibraEsterlina = 5601;
-
-
-// switch (moneda) {
-
-//     case 1:
-//         console.log(`Tu conversión en Dolares es de: $ ${divisa / Dolar}`);
-//         break;
-//     case 2:
-//         console.log(`Tu conversión en Euros es de: $ ${divisa / Euro}`);
-//         break;
-//     case 3:
-//         console.log(`Tu conversión en Libras Esterlinas es de: $ ${divisa / LibraEsterlina}`);
-//         break;
-
-//     default:
-//         console.log("Escoge una Opción correcta");
-//         break;  
-// }
+let Dolar = 4280;
+let Euro = 4728;
+let LibraEsterlina = 5601;
 
 
+switch (moneda) {
 
-        //Estructuras repetitivas jueves 12-09-24
+    case 1:
+        console.log(`Tu conversión en Dolares es de: $ ${divisa / Dolar}`);
+        break;
+    case 2:
+        console.log(`Tu conversión en Euros es de: $ ${divisa / Euro}`);
+        break;
+    case 3:
+        console.log(`Tu conversión en Libras Esterlinas es de: $ ${divisa / LibraEsterlina}`);
+        break;
+
+    default:
+        console.log("Escoge una Opción correcta");
+        break;  
+}
+*/
+
+//Estructuras repetitivas jueves 12-09-24
 
 //         for (let i= 3; i<=30; i+=3){ //incremento
 // console.log(i);
 //         }
 
-        // for(let j= 20; j>=1; j-=1){
-        //     console.log(j);
-        // }
+// for(let j= 20; j>=1; j-=1){
+//     console.log(j);
+// }
 
 // let tabla =4;
 // for (let i =1; i<=10; i++){
@@ -213,14 +213,13 @@
 // }
 //     console.log ("-----------------------")
 
-    //Decremento
+//Decremento
 
-    // for(let j= 20; j >=1; j-=2){
-    //     console.log(j);
-    // }
-   
-                //Ejercicio para tablas de multiplicar (Jueves 12_09-24)
-                
+// for(let j= 20; j >=1; j-=2){
+//     console.log(j);
+// }
+
+//Ejercicio para tablas de multiplicar (Jueves 12_09-24)
 
 //     let Tabla;
 //     Tabla =parseInt(prompt("Coloca la tabla de multiplicar que quieras"));
@@ -228,23 +227,19 @@
 //         console.log(`${Tabla} * ${T} = ${Tabla*T}`);
 //     }
 
-                //Repaso Viernes 13-09-24
+//Repaso Viernes 13-09-24
 
+// let apell = null;
+// apell = "Richy";
+// console.log(apell);
 
-        // let apell = null;
-        // apell = "Richy";
-        // console.log(apell);
-
-
-            //Casos para trabajar
+//Casos para trabajar
+//menu de restaurante
 
 /*
 let menu = prompt("Escoge que tipo de comida quieres \n carne, pescado, Ensalada").toLowerCase();
 
-
-
 switch (menu) {
-
     case "carne":
         console.log("Quieres acompañar tu carne con vino tinto");
         break;
@@ -261,7 +256,7 @@ switch (menu) {
 }
 */
 
-       //ejercicio desarrollado por el Instructor (MAS OPTIMO)
+//Mismo ejercicio pero desarrollado por el Instructor (MAS OPTIMO)
 
 /*
 let menu, bebida;
@@ -281,18 +276,88 @@ switch (menu = prompt("Tipo de menu: Carne, Pescado, Ensalada").toLowerCase()){
 alert(bebida);
 */
 
+                                //Dos ejercicios para desarrollar en casa (Sábado 14-09-24)
 
-let menu = prompt("Tipo de menu: \n Carne, Pescado, Ensalada").toLowerCase();
-switch (menu) {
-        case "carne": console.log (`Ha pedido ${menu}, desea acompañarla con una copa de Vino Tinto`);
-        break;
-        
-        case "pescado": console.log (`Ha pedido ${menu}, desea acompañarlo con una copa de Vino Blanco`);
-        break;
-        
-        case "ensalada": console.log (`Ha pedido ${menu}, desea acompañarla con un vaso de Agua Mineral`);
-        break;
-        
-        default: console.log("Debes elegir entre Carne, Pescado o Ensalada, GRACIAS" );        
-        
+
+                        //Ejercicio de un negocio de Video Juegos
+
+
+
+let salas, juegos;
+salas = parseInt(prompt("¿Cuantos créditos quieres Jugar?"));
+switch (salas) {
+  case 1:
+    juegos = "Solo puedes ingresar a la sala de Consolas";
+    break;
+
+  case 2:
+    juegos = "Puedes ingresar a la salas de Consolas y Juegos 2D";
+    break;
+
+  case 3:
+    juegos = "Puedes ingresar a la salas de Consolas,  Juegos 2D y Juegos 3D ";
+    break;
+  case 4:
+    juegos =
+      "Puedes ingresar a la salas de Consolas,  Juegos 2D, Juegos 3D y Realidad Virtual ";
+    break;
+
+  default:
+    juegos =
+      "Esos Créditos no Existen, debes escoger entre 1, 2, 3, o 4 Créditos";
 }
+alert(juegos);
+
+
+
+                        //Caso Numero 2 (porcentajes de descuentos)
+
+                                //mi lógica sin if ni switch
+
+/*
+                        const a = 0.05;
+                        let precio, descuento, pagar;
+                        precio = parseFloat(prompt("Ingresa el costo de tú compra"));
+                        
+                        descuento = (precio) * a;
+                        pagar = precio - descuento;
+                        
+                        alert("El descuento es de: " +descuento);
+                        alert(" El total a pagar es: "+pagar);
+                        */
+
+
+                //código funcional y listo
+/*
+
+ const a = 0.05;
+ const b = 0.1;
+ const c = 0.15;
+                        
+        let compra,
+        descuento = 0;
+        compra = parseFloat(prompt("Ingresa el costo de tú compra"));
+                        
+        if (compra < 100000) {
+        descuento = 0; // sin descuento
+        } else if (compra >= 100000 && compra <= 300000) {
+        descuento = a; // Descuento del 5%
+        } else if (compra > 300001 && compra <= 500000) {
+        descuento = b; // Descuento del 10%
+        } else if (compra > 500001) {
+        descuento = c; // Descuento del 15%
+        }
+                        
+                        // Descuento aplicado
+        let totalDescuento = compra * descuento + "\n El cual es un " + descuento * 100 + "%";
+                        // Pago con descuento
+        let totalPagar = compra - compra * descuento;
+                        
+                        //Calcula el descuento
+        alert("El descuento total es de = $  " + totalDescuento);
+                        
+                        // Calcula el total a pagar después del descuento
+        alert("El total a pagar es = $ " + totalPagar);
+                        
+        
+*/
