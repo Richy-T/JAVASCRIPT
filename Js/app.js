@@ -199,20 +199,21 @@ switch (moneda) {
 
 //Estructuras repetitivas jueves 12-09-24
 
-//         for (let i= 3; i<=30; i+=3){ //incremento
-// console.log(i);
-//         }
+/*
+        for (let i= 3; i<=30; i+=3){ //incremento
+console.log(i);
+        }
 
-// for(let j= 20; j>=1; j-=1){
-//     console.log(j);
-// }
+for(let j= 20; j>=1; j-=1){
+    console.log(j);
+}
 
-// let tabla =4;
-// for (let i =1; i<=10; i++){
-//     console.log(`${tabla} * ${i} =${(tabla*id)}`);
-// }
-//     console.log ("-----------------------")
-
+let tabla =4;
+for (let i =1; i<=10; i++){
+    console.log(`${tabla} * ${i} =${(tabla*i)}`);
+}
+    console.log ("-----------------------")
+*/
 //Decremento
 
 // for(let j= 20; j >=1; j-=2){
@@ -221,12 +222,14 @@ switch (moneda) {
 
 //Ejercicio para tablas de multiplicar (Jueves 12_09-24)
 
-//     let Tabla;
-//     Tabla =parseInt(prompt("Coloca la tabla de multiplicar que quieras"));
-//     for(let T = 1; T <= 10; T++){
-//         console.log(`${Tabla} * ${T} = ${Tabla*T}`);
-//     }
+/*
+    let Tabla;
+    Tabla =parseInt(prompt("Coloca la tabla de multiplicar que quieras"));
+    for(let T = 1; T <= 10; T++){
+        console.log(`${Tabla} * ${T} = ${Tabla*T}`);
+    }
 
+    */
 //Repaso Viernes 13-09-24
 
 // let apell = null;
@@ -281,7 +284,7 @@ alert(bebida);
 
                         //Ejercicio de un negocio de Video Juegos
 
-
+/*
 
 let salas, juegos;
 salas = parseInt(prompt("¿Cuantos créditos quieres Jugar?"));
@@ -308,7 +311,7 @@ switch (salas) {
 }
 alert(juegos);
 
-
+*/
 
                         //Caso Numero 2 (porcentajes de descuentos)
 
@@ -361,3 +364,33 @@ alert(juegos);
                         
         
 */
+
+
+                                //Clase Lunes 16-09-24
+
+      //talas de multiplicar
+
+//Ejercicio para tablas de multiplicar (Jueves 12_09-24)
+
+/*
+let Tabla;
+Tabla = 1
+for(let T = 1; T <= 10; T++){
+  for(let T =1; i <= 10; i++){
+    console.log(`${T} * ${T} = ${T*T}`);
+  }
+
+}
+*/
+
+
+       //Cuento suman lo primeros 100 números impares
+
+let sum = 0;
+let calculo = 0;
+for (let i = 1; calculo <= 100; i+=2){
+  sum += i;
+  calculo++;
+}
+console.log (`la suma de los numeros impares es :${sum}`);
+
