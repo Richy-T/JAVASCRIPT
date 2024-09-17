@@ -386,6 +386,7 @@ for(let T = 1; T <= 10; T++){
 
        //Cuento suman lo primeros 100 números impares
 
+       /*
 let sum = 0;
 let calculo = 0;
 for (let i = 1; calculo <= 100; i+=2){
@@ -393,4 +394,68 @@ for (let i = 1; calculo <= 100; i+=2){
   calculo++;
 }
 console.log (`la suma de los numeros impares es :${sum}`);
+
+*/
+
+
+          // Martes 17-09-24 ciclo while y Do 
+
+/*
+//los números de 1 al 10 con for
+for(let i = 1; i<=10; i++){
+  console.log(i);
+}
+
+//los números de 1 al 10 con while
+
+let numero = 1;
+
+while(numero <=10){
+  console.log(numero);
+  numero++;
+}
+
+*/
+
+
+      // sumar números positivos
+
+            //Método 1
+
+/*
+  
+  let n=1;
+  let sum=0;
+
+  while(n > 0){
+    n = parseInt(prompt("ingrese un numero positivo para sumarlos e ingrese un numero negativo para salir"));
+    sum += n;
+    console.log(sum);
+}
+
+console.log(`la suma de los números ingresados es : ${(sum+(n * -1))}`);
+*/
+
+
+               //Método 2 
+
+/*
+
+let n=1;
+let sum=0;
+
+while(n > 0){
+  n = parseInt(prompt("ingrese un numero positivo para sumarlos e ingrese un numero negativo para salir"));
+
+  if(n>0){
+    sum += n;
+    }
+    console.log(sum);
+}
+
+console.log(`la suma de los números ingresados es : ${(sum)}`);
+
+*/
+
+
 
