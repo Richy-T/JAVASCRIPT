@@ -458,4 +458,241 @@ console.log(`la suma de los números ingresados es : ${(sum)}`);
 */
 
 
+      //otra solución otro compañero Jorge 
+
+/*
+
+let num2;
+let sum2  = 0;
+
+while ((num2 = parseInt(prompt("Ingrese un número positivo: ")))> 0){
+  sum2 += num2;
+  console.log(sum2);
+}
+console.log("La suma Total es : ", sum2);
+
+*/
+
+
+       //Desarrollar menu de opciones
+
+/*
+
+let opcion; 
+let estado = true;
+
+let coseno,seno,raiz,numero;
+// 1.Raiz
+// 2.Seno
+// 3.Coseno
+
+//opciones ralizar un calculo matematico
+
+while(estado){
+
+opcion = (parseInt(prompt(`SELECCIONE UNA OPCIÓN \n 1: Raiz \n 2: Seno de N1 \n 3: Coseno N1 \n 4: Salir `)));
+
+switch(opcion){
+
+  case 1: alert(`seleccionaste Raíz`);
+    numero = (parseFloat(prompt(`INGRESE EL NUMERO PARA CALCULAR LA RAIZ `)));
+     raiz = Math.sqrt(numero);
+     alert(`LA RAIZ DE ${numero} ES: ${raiz}`);
+    
+  break;
+
+  case 2: alert(`seleccionaste Seno N1`);
+  numero = (parseFloat(prompt(`INGRESE EL NUMERO PARA CALCULAR SENO`)));
+   seno = Math.sin(numero);
+   alert(`EL SENO DE ${numero} ES : ${seno}`);
+   
+  break;
+
+  case 3: alert(`seleccionaste Coseno N1`);
+  numero = (parseFloat(prompt(`INGRESE EL NUMERO PARA CALCULAR COSENO`)));
+   coseno = Math.cos(numero);
+   alert(`EL COSENO DE ${numero} ES : ${coseno}`);
+  break;
+
+  case 4: alert("SALIENDO...");
+  estado = false;
+  break;
+  
+  default:
+   alert("LA OPCIÓN NO EXISTE");
+  
+  }
+}
+
+*/
+
+
+        //Ejercicio en clase Adivina el número
+
+
+// let alea = Math.floor(Math.random() * 50) + 1; /**forma numero 1 */
+
+/*
+
+let alea = Math.floor(Math.random() * 50) + 1;
+let nUsuario = 0;
+let intentos = 0;
+
+while (alea !== nUsuario){
+  nUsuario = (parseFloat(prompt(`ingresa un número entre 1 y 50`)));
+  intentos++;
+
+  if (nUsuario < alea){
+    alert("Tu número bebe ser mayor.");
+  }else if (nUsuario > alea){
+    alert("Tu número debe ser menor.");
+  }else{
+    alert(`✌👌Felicidades! Adivinaste¡ \n Mi número era 👍 ${ alea} \n y lo encontraste en: ${ intentos} intentos. Muy bien ✌👌👍`);
+    
+  }
+}
+
+*/
+ 
+      // Do while
+
+        //Calculo del area de un circulo, cuadrado, triangulo
+
+        //area del circulo = pi* radio al cuadrado pi=* r+r
+ // area circulo:  a= pi *r*r       
+// area cuadrado  a= lado * lado
+// rea triangulo: a= B*H/2
+
+/*
+
+let ac, acu, at;
+let r, lado, b, h;
+const pi= 3.141516;
+let opcion;
+
+// let estado = true; //buleano
+
+      do {
+        opcion = parseInt(prompt(`1. area Circulo \n 2. area del Cuadrado \n 3. area del triangulo`)); //lo que el usuario escoge. y guardar en opcion. 
+
+        switch(opcion){
+
+          case 1: alert("Area del circulo");
+          r= parseInt(prompt("Ingrese el valor del radio"));
+          
+          ac = pi * (r * r);
+          alert(`El Area del círculo es : ${ac}`);
+
+          break;
+
+          case 2: alert("Area del Cuadrado");
+          // a= lado *lado
+          lado = parseFloat(prompt("ingrese el valor del lado"));
+          
+          acu = (lado*lado);
+          alert(`El Area del cuadrado es : ${acu}`);
+          
+          break;
+          
+          case 3: alert("Area del Triangulo");
+         
+                // a = (b*h)/2
+
+                b = parseFloat(prompt("ingrese el valor de la base"));
+                h = parseFloat(prompt("ingrese el valor de la altura"));
+
+                at = (b*h)/2;
+                alert(`El Area del triangulo es : ${at}`);
+
+                break;
+          case 4: alert("");
+          
+          alert("SALIENDO .........");
+          // estado = false;
+
+          break
+          default: 
+           alert("opcion no valida");
+        }    
+
+      }while(opcion !=4); // repite el menu  
+      
+      //otra opción 
+
+      // }while (estado); // y en caso 4: activar estado = false;
+
+      */
+
+              //Mismo ejercicio pero utilizando while
+
+
+/*        
+              
+      let ac, acu, at;
+      let r, lado, b , h;      
+      const pi = 3.1416;      
+      let opcion;
+      
+      opcion = parseInt(prompt(`1. Area Circulo \n 2. Area del Cuadrado \n 3. Area del Triangulo \n 4. Salir`));
+      
+      while(opcion != 4){   
+         
+      
+        switch(opcion){      
+      
+          case 1: alert("Area del circulo");
+          // A = pi * r*r
+          r = parseFloat(prompt("Ingrese el valor del radio"));
+      
+          ac = pi * (r*r);
+      
+          alert(`El area del circulo es: ${ac}`);
+        
+          break;
+      case 2: alert("Area del cuadrado");
+      
+         // A = lado * lado
+      
+         lado = parseFloat(prompt("Ingrese el valor del lado"));
+      
+         acu = (lado*lado);
+      
+         alert(`El area del cuadrado es: ${acu}`);
+      
+          break;
+      
+          case 3: alert("Area del triangulo");
+      
+          // A = B*H/2
+      
+          b = parseFloat(prompt("Ingrese el valor de la base"));
+          h = parseFloat(prompt("Ingrese el valor de la altura"));
+      
+          at = (b*h)/2;
+      
+          alert(`El area del triangulo es: ${at}`);
+      
+          break;
+      case 4:
+            alert("SALIENDO.....");
+            //estado = false;
+      
+          break;
+      
+          default: 
+          alert("Opción no valida");  
+        
+      
+        }
+      
+        opcion = parseInt(prompt(`1. Area Circulo \n 2. Area del Cuadrado \n 3. Area del Triangulo \n 4. Salir`));
+      
+      }
+      
+*/
+
+          // Ejercicio de Temperaturas
+
+  
+      
 
