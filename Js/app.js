@@ -693,6 +693,66 @@ let opcion;
 
           // Ejercicio de Temperaturas
 
-  
-      
+                //temperaturas  
+
+
+                let opcion;
+                do {
+                    opcion = prompt("Selecciona una opción para hacer la conversión:\n1. Kelvin a Celsius\n2. Kelvin a Fahrenheit\n3. Fahrenheit a Celsius\n4. Fahrenheit a Kelvin\n5. Celsius a Kelvin\n6. Celsius a Fahrenheit\n0. Salir");
+                
+                    let valor;
+                    let resultado;
+                
+                    if (opcion !== "0") {
+                        valor = parseFloat(prompt("Introduce el valor que quieres convertir de temperatura: 🌡🌡🌡🌡"));
+                    }
+                
+                    switch (opcion) {
+
+                        case "1":
+                            // Kelvin a Celsius
+                            resultado = valor - 273.15;
+                            alert(valor + " Kelvin son " + resultado.toFixed(3) + " °Celsius");
+                            break;
+
+                        case "2":
+                            // Kelvin a Fahrenheit
+                            resultado = (valor - 273.15) * 9/5 + 32;
+                            alert(valor + " Kelvin son " + resultado.toFixed(3) + " °Fahrenheit");
+                            break;
+
+                        case "3":
+                            // Fahrenheit a Celsius
+                            resultado = (valor - 32) * 5/9;
+                            alert(valor + " °Fahrenheit son " + resultado.toFixed(3) + " °Celsius");
+                            break;
+
+                        case "4":
+                            // Fahrenheit a Kelvin
+                            resultado = (valor - 32) * 5/9 + 273.15;
+                            alert(valor + " °Fahrenheit son " + resultado.toFixed(3) + " Kelvin");
+                            break;
+
+                        case "5":
+                            // Celsius a Kelvin
+                            resultado = valor + 273.15;
+                            alert(valor + " °Celsius son " + resultado.toFixed(3) + " Kelvin");
+                            break;
+
+                        case "6":
+                            // Celsius a Fahrenheit
+                            resultado = (valor * 9/5) + 32;
+                            alert(valor + " °Celsius son " + resultado.toFixed(3) + " °Fahrenheit");
+                            break;
+
+                        case "0":
+
+                            alert("Saliendo del programa.......");
+                            break;
+                        default:
+                            alert("Opción no válida. Inténtalo de nuevo.");
+                    }
+                    
+                  }while (opcion !== "0");
+                               
 
