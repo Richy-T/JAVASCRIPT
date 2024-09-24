@@ -693,15 +693,18 @@ let opcion;
 
           // Ejercicio de Temperaturas
 
+
+          /*
+
                 //temperaturas  
 
-
+                let valor;
+                let resultado;
                 let opcion;
                 do {
                     opcion = prompt("Selecciona una opción para hacer la conversión:\n1. Kelvin a Celsius\n2. Kelvin a Fahrenheit\n3. Fahrenheit a Celsius\n4. Fahrenheit a Kelvin\n5. Celsius a Kelvin\n6. Celsius a Fahrenheit\n0. Salir");
                 
-                    let valor;
-                    let resultado;
+                  
                 
                     if (opcion !== "0") {
                         valor = parseFloat(prompt("Introduce el valor que quieres convertir de temperatura: 🌡🌡🌡🌡"));
@@ -756,3 +759,132 @@ let opcion;
                   }while (opcion !== "0");
                                
 
+          */
+         
+
+
+
+    //lunes 23-09-24 Funciones 
+
+/*
+//ejemplo 1
+    saludar ("Richy");
+    function saludar(nombre){
+      alert(`Hola ${nombre}`);
+    }
+*/
+
+
+//ejemplo 2
+/*
+function raiz (numero){
+    return Math.sqrt(numero);
+}
+console.log(raiz(32));
+
+*/
+
+//Ejemplo 3
+
+/*
+function exponente(base, ciadrado){
+  return Math.pow(base, ciadrado);
+
+}
+
+console.log(El cuadrado es: ${exponente(12, 6)});
+
+*/
+
+
+// Proyecto de temperaturas pero con funciones
+
+
+
+function kelvinACelsius(kelvin) {
+  return kelvin - 273.15;
+}
+
+function kelvinAFahrenheit(kelvin) {
+  return (kelvin - 273.15) * 9/5 + 32;
+}
+
+
+function fahrenheitACelsius(fahrenheit) {
+  return (fahrenheit - 32) * 5/9;
+}
+
+function fahrenheitAKelvin(fahrenheit) {
+  return (fahrenheit - 32) * 5/9 + 273.15;
+}
+
+function celsiusAKelvin(celsius) {
+  return celsius + 273.15;
+}
+
+function celsiusAFahrenheit(celsius) {
+  return (celsius * 9/5) + 32;
+}
+
+// Función principal que ejecuta las conversiones
+function converttemperatura() {
+  let option;
+  do {
+      //Menu para las opciones
+      option = prompt(
+          "🌡🌡Introduce el valor que quieres convertir de temperatura: 🌡🌡:\n" +
+          "1. Kelvin a Celsius\n" +
+          "2. Kelvin a Fahrenheit\n" +
+          "3. Fahrenheit a Celsius\n" +
+          "4. Fahrenheit a Kelvin\n" +
+          "5. Celsius a Kelvin\n" +
+          "6. Celsius a Fahrenheit\n" +
+          "7. Salir"
+      );
+
+      let temperatura, result;
+      
+      // Evaluar la opción que seleccione el usuario
+      switch (option) {
+          case '1':
+            temperatura = parseFloat(prompt("Ingresa la temperatura en Kelvin:"));
+              result = kelvinACelsius(temperatura);
+              alert(`${temperatura} grados Kelvin es : = ${result.toFixed(2)} grados °Celsius`);
+              break;
+          case '2':
+            temperatura = parseFloat(prompt("Ingresa la temperatura en Kelvin:"));
+              result = kelvinAFahrenheit(temperatura);
+              alert(`${temperatura} grados Kelvin es : = ${result.toFixed(2)} grados °Fahrenheit`);
+              break;
+          case '3':
+            temperatura = parseFloat(prompt("Ingresa la temperatura en Fahrenheit:"));
+              result = fahrenheitACelsius(temperatura);
+              alert(`${temperatura} grados °Fahrenheit es : = ${result.toFixed(2)} grados °Celsius`);
+              break;
+          case '4':
+            temperatura = parseFloat(prompt("Ingresa la temperatura en Fahrenheit:"));
+              result = fahrenheitAKelvin(temperatura);
+              alert(`${temperatura} grados °Fahrenheit es : = ${result.toFixed(2)} grados °Kelvin`);
+              break;
+          case '5':
+            temperatura = parseFloat(prompt("Ingresa la temperatura en Celsius:"));
+              result = celsiusAKelvin(temperatura);
+              alert(`${temperatura} grados °Celsius es : = ${result.toFixed(2)} grados °Kelvin`);
+              break;
+          case '6':
+            temperatura = parseFloat(prompt("Ingresa la temperatura en Celsius:"));
+              result = celsiusAFahrenheit(temperatura);
+              alert(`${temperatura} grados °Celsius es : = ${result.toFixed(2)} grados °Fahrenheit`);
+              break;
+          case '7':
+              alert("Saliendo del programa...");
+              break;
+          default:
+              alert("Opción no válida. Inténtalo de nuevo.");
+              break;
+      }
+  } while (option !== '7');
+}
+
+// Llamar a la función principal
+converttemperatura();
