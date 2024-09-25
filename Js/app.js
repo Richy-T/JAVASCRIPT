@@ -799,7 +799,7 @@ console.log(El cuadrado es: ${exponente(12, 6)});
 
 // Proyecto de temperaturas pero con funciones
 
-
+/*
 
 function kelvinACelsius(kelvin) {
   return kelvin - 273.15;
@@ -808,7 +808,6 @@ function kelvinACelsius(kelvin) {
 function kelvinAFahrenheit(kelvin) {
   return (kelvin - 273.15) * 9/5 + 32;
 }
-
 
 function fahrenheitACelsius(fahrenheit) {
   return (fahrenheit - 32) * 5/9;
@@ -839,7 +838,7 @@ function converttemperatura() {
           "4. Fahrenheit a Kelvin\n" +
           "5. Celsius a Kelvin\n" +
           "6. Celsius a Fahrenheit\n" +
-          "7. Salir"
+          "0. Salir"
       );
 
       let temperatura, result;
@@ -876,15 +875,232 @@ function converttemperatura() {
               result = celsiusAFahrenheit(temperatura);
               alert(`${temperatura} grados °Celsius es : = ${result.toFixed(2)} grados °Fahrenheit`);
               break;
-          case '7':
+          case '0':
               alert("Saliendo del programa...");
               break;
           default:
               alert("Opción no válida. Inténtalo de nuevo.");
               break;
       }
-  } while (option !== '7');
+  } while (option !== '0');
 }
 
 // Llamar a la función principal
 converttemperatura();
+
+*/
+
+//Funcion tradicinal
+
+
+/*
+
+function multiplicacion (a,b){
+  retur a*b;
+}
+
+console.log(multiplicacion(5, 6));
+
+
+// Funcion Flecha
+
+let multiplicacion1 =(a,b) => {
+  return a*b;
+}
+
+console.log(multiplicacion1(6, 3));
+
+// forma 3
+
+let multiplicacion2 =(a,b)=> a+b;
+console.log(multiplicacion(3,7));
+
+
+          //otro ejemplo
+
+let ra =(numero) =>Math.sqrt(numero);
+
+console.log(ra(25));
+
+
+
+            // Otro ejemplo
+
+
+let funcion =() => console.log("hola, soy una funcion sin parametros")
+funcion();
+*/
+
+
+            //Arrays 
+
+/*
+
+let estudiantes = ["Laura","Julian","Andres", "Oscar", " Paola"];
+
+console.log(estudiantes);
+
+// Añadir un elemento al final del Arreglo
+
+// estudiantes.push("Ricardo");
+ console.log(estudiantes.push("Ricardo"));
+
+ // Añadir elementos al inicio
+
+console.log(estudiantes.unshift("Esmeralda"));
+
+// añadir elementos en alguna posición 
+
+console.log(estudiantes.splice(2 , 0 , "Sofia"));
+
+// borrar ultimo  elemento
+
+console.log(estudiantes.pop());
+
+// borrar primer elemento
+
+console.log(estudiantes.shift());
+
+//Saber la posición de un elemento
+
+console.log(estudiantes.indexOf("Andres"));
+
+// borrar elemento  en una posición
+console.log(estudiantes.splice(2, 1)); //2 es la posición y 1 el numero e elementos que quiero eliminar
+
+//recorrer el arreglo
+
+//op1 forma 1
+
+estudiantes.forEach((est) =>{
+  console.log(est);
+});
+
+
+//Que hay en posicion 3 (iterador) forma 2
+
+estudiantes.forEach((est) =>{
+    if(est === estudiantes[3]){
+      console.log(est);
+    }
+});
+
+// for(let est of estudiantes){
+//   console.log(est);
+// }
+
+
+//to string
+let vector = [];
+  vector[0] = 15;
+  vector[1] = 63;
+  vector[2] = 48;
+
+  console.log(vector);
+
+  */
+
+                  // Miercoles 25-09-24
+
+/*
+  
+ let vector =[];
+
+ //Recorrer para llenar el vector
+
+ for(let i = 0; i <5; i++){
+
+  vector.push(i+1);
+ }
+
+ // Recorro para mostrar el vector
+ for(let i =0; i<5; i++){
+  console.log(vector[i]);
+ }
+
+ */
+
+                 //Otro vector de numeros
+
+/*
+
+      let numeros = [12,23,18,16,19];
+      let suma = 0;
+      for(let i = 0; i < numeros.length; i++){ //numeros.legth  es igual a la cantidad de numeros que hay en este caso (5)
+
+            suma += numeros[i];
+
+      } //aquí en consola dice que la suma de esos numeros es 88
+      console.log(`La suma es : ${suma}`);
+
+*/
+
+/*
+      //foreach
+      numeros.forEach((nu) => {
+        suma += nu;
+      });
+
+console.log(`la suma es: ${suma}`);
+
+*/
+
+      //Sumar pares y impares
+/*
+      let numeros = [12,23,18,16,19];
+      let impares = 0;
+      let pares = 0;
+
+      for(let i = 0; i < numeros.length; i++){ 
+          if(numeros[i]%2==0){
+            pares += numeros[i]
+          }else{
+            impares += numeros[i]
+          }          
+
+        }
+        console.log(`La suma en pares es : ${pares }`);    
+        console.log(`La suma en impares es : ${impares}`);    
+
+        */
+ 
+
+    // identificar el mayor y el menor 
+  
+
+let numeros = [12, 23, 18, 16, 19];
+let numeroMayor = numeros[0];
+let numeroMenor = numeros[0];
+
+
+for (let i = 0; i < numeros.length; i++) {
+    if (numeros[i] > numeroMayor) {
+        numeroMayor = numeros[i];
+    } else if (numeros[i] < numeroMenor) {
+        numeroMenor = numeros[i];
+    }
+}
+
+console.log("El número mayor es:", numeroMayor);
+console.log("El número menor es:", numeroMenor);
+
+
+
+// para el usuario ingresar numeros que se alojen en el console.log
+
+/*
+
+let num = new Array(5);
+
+//lo recorro para llenarlo
+for (let i=0; i< num.length; i++){
+  num[i]= parseInt(prompt("ingrese el numero entero"));
+
+} // Recorro para mostrar
+for (let i =0; i< num.length; i++){
+  console.log(`${num[i]}`);
+}
+
+*/
+
+
