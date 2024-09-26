@@ -1000,7 +1000,7 @@ let vector = [];
 
   */
 
-                  // Miercoles 25-09-24
+                             // Miércoles 25-09-24
 
 /*
   
@@ -1020,7 +1020,7 @@ let vector = [];
 
  */
 
-                 //Otro vector de numeros
+                 //Otro vector de números
 
 /*
 
@@ -1066,7 +1066,9 @@ console.log(`la suma es: ${suma}`);
  
 
     // identificar el mayor y el menor 
-  
+ 
+    
+/*
 
 let numeros = [12, 23, 18, 16, 19];
 let numeroMayor = numeros[0];
@@ -1084,7 +1086,7 @@ for (let i = 0; i < numeros.length; i++) {
 console.log("El número mayor es:", numeroMayor);
 console.log("El número menor es:", numeroMenor);
 
-
+*/
 
 // para el usuario ingresar numeros que se alojen en el console.log
 
@@ -1102,5 +1104,42 @@ for (let i =0; i< num.length; i++){
 }
 
 */
+
+
+            // Jueves 26-09-24
+
+            
+  //Ejercicio en Clase para determinar las Calificaciones de estudiantes
+
+
+  let tamanio = parseInt(prompt("ingrese la cantidad de estudiantes"));
+  let Calificaciones = new Array(tamanio);
+  let sumar = 0;
+  let cAlta= 0;
+      
+
+  for (let i = 0; i < Calificaciones.length; i++){
+
+    Calificaciones[i] = parseFloat(prompt("ingrese las notas"));
+    sumar += Calificaciones[i];
+
+  }
+  
+  for(let i =0; i < Calificaciones.length; i++){
+    console.log(`Calificaciones ${i+1} : ${Calificaciones[i]}`);    
+
+    //Calificación máxima es
+  if(Calificaciones[i] > cAlta){
+    cAlta = Calificaciones[i];
+    }
+  
+  }
+ 
+    console.log (`la suma de las calificaciones es: ${sumar}`);
+    console.log(`El promedio de las calificaciones es: ${(sumar/tamanio)}`);
+    console.log(`La calificación mas alta es : ${cAlta}`);
+
+
+
 
 
