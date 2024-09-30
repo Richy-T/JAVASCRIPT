@@ -1111,6 +1111,7 @@ for (let i =0; i< num.length; i++){
             
   //Ejercicio en Clase para determinar las Calificaciones de estudiantes
 
+/*
 
   let tamanio = parseInt(prompt("ingrese la cantidad de estudiantes"));
   let Calificaciones = new Array(tamanio);
@@ -1139,7 +1140,158 @@ for (let i =0; i< num.length; i++){
     console.log(`El promedio de las calificaciones es: ${(sumar/tamanio)}`);
     console.log(`La calificación mas alta es : ${cAlta}`);
 
+*/
+
+              // Viernes 27-09-24
+              //Repaso y ejercicio de caja
+
+//definición e inicialización de variables y arreglos
+
+
+/*
+
+function imprimaProducto(prod, prec, tot_art){
+      //Mostrar los productos que han sido facturados y la compra.
+  for(let i = 0; i<tot_art; i++){
+    console.log(`producto : ${prod[i]} : Precio del articulo : ${prec[i]}`);   
+
+  }
+
+}
+
+let productos = new Array(10);
+let precios = new Array(10);
+cant = 0;
+function caja(){
+  let total_Fact = 0;
+
+  //Solicitar nombre del producto y el costo
+
+
+  for(let i=0; i<productos.length; i++ ){
+      
+    //Llamar los productos.
+    let nombre = prompt("ingrese el nombre del producto");
+    let precio = parseInt(prompt("ingrese el precio del producto"));
+    
+    productos [i] = nombre;
+    precios [i] = precio;
+    // cont = cont + 1;
+    cant++;
+    
+    //sumando lo precios de los productos
+    total_Fact += precio;
+
+    //preguntar al usuario si desea seguir faturando
+    masArtiuclos = confirm("Desea seguir catutrando mas articulos ..? ");
+    if(masArtiuclos == false){
+      imprimaProducto(productos, precios, cant);
+      break;
+    }    
+  
+  }
+  //Mostrar el total facturado
+  console.log(`El total a pagar es : ${total_fact}`);
+
+}
+caja();
+
+*/
+
+  //---------------------------------------------------------------------
+  //Lunes 30-09-24
+
+                  //Objetos orientados 
+/*
+
+let carro1 = {
+  marca: "Ford",
+  modelo: "Fiesta",
+  color: "Rojo",
+  anio: 2018,
+  placa: "ABC123"
+}
+
+let carro2 = {
+  marca: "Renolt",
+  modelo: "Logan",
+  color: "Negro",
+  anio: 2020,
+  placa: "DEF456",
+  acelerar(){  //accion (es una Funcion) que esta haciendo el carro
+    console.log(`El carro esta accelerando`);
+  }
+}
+console.log(`Datos Carro1`, carro1);
+console.log(`Datos Carro2`, carro2);
+
+
+console.log(`La marca del vehiculo 1 es: ${carro1.marca}`)
+console.log(`La placa del vehiculo 2 es: ${carro2.placa}`)
+
+//Modificando valores de un objeto
+
+carro1.marca = "Toyota";
+carro1.color ="Gris";
+
+console.log(`los datos el vehiculo 1 son :` , carro1);
+
+carro2.acelerar();
+
+*/
+
+          // Nueva forma de crear objetos desde 2015
+//Definir la calse (Class)
+
+class Persona{
+
+  constructor(nombre, edad, genero){  //nombre, eddad, geneero, etc... son las variables o atribtos
+    this._nombre = nombre; //this = es el alcance de la variable
+    this._edad = edad;
+    this._genero = genero;
+  }
+
+//acceder atravees de get y set
+ get nombre(){
+  return this._nombre;
+ }
+set nombre(nombre){
+  this._nombre = this.nombre; 
+}
+get edad(){
+  return this._edad;
+}
+
+set edad(edad){
+  this._edad = edad;
+}
+
+get genero(){
+  return this._genero;
+}
+
+set genero(genero){
+  this._genero = genero;
+}
 
 
 
+saludar(){
+  console.log(`Hola, soy ${this._nombre} y tengo ${this._edad} años.`);
+  }
+}
 
+//cerando una persona de la clase persona
+
+const per1 = new Persona("Don gato", 13, "masuculino");
+
+per1.saludar();
+
+const per2 = new Persona("Juanito", 18, "masculino");
+
+per1.nombre = "lorena";
+
+per2.edad = 45;
+
+per1.saludar();
+per2.saludar();
