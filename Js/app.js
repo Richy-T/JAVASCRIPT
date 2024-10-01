@@ -1243,6 +1243,8 @@ carro2.acelerar();
           // Nueva forma de crear objetos desde 2015
 //Definir la calse (Class)
 
+/*
+
 class Persona{
 
   constructor(nombre, edad, genero){  //nombre, eddad, geneero, etc... son las variables o atribtos
@@ -1252,10 +1254,10 @@ class Persona{
   }
 
 //acceder atravees de get y set
- get nombre(){
+ get nombre(){   //get para obtener el dato
   return this._nombre;
  }
-set nombre(nombre){
+set nombre(nombre){   //set establece el dato
   this._nombre = this.nombre; 
 }
 get edad(){
@@ -1275,11 +1277,10 @@ set genero(genero){
 }
 
 
-
-saludar(){
+saludar(){  //es el metodo
   console.log(`Hola, soy ${this._nombre} y tengo ${this._edad} años.`);
   }
-}
+}    //Hata haca es la clase y es la plantilla
 
 //cerando una persona de la clase persona
 
@@ -1289,9 +1290,160 @@ per1.saludar();
 
 const per2 = new Persona("Juanito", 18, "masculino");
 
-per1.nombre = "lorena";
+per1.nombre = "lorena";  //set
 
-per2.edad = 45;
+per2.edad = 45;   //set
 
 per1.saludar();
 per2.saludar();
+*/
+
+
+        // Martes 0110-24
+
+/*
+class Libro{
+  constructor(titulo, autor, paginas){
+    this._titulo = titulo;
+    this._autor = autor;
+    this._paginas = paginas;
+  }
+
+get titulo(){
+  return this._titulo;
+}
+
+set titulo(titulo){
+  this._titulo = titulo;
+}
+
+get autor(){
+  return this._autor;
+}
+
+set autor(autor){
+  this._autor = autor;
+}
+
+get paginas(){
+  return this._paginas;
+}
+
+set paginas(paginas){
+  this._paginas = this._paginas;
+}
+mostrarInfo(){
+  console.log(`El titulo del libro es: ${this._titulo}, el autor es: ${this._autor} y tiene ${this._paginas} paginas.`);
+   }
+  } 
+   //aqui termina la plantilla
+  
+
+// libro creo una constante o variable (variable o constante )
+
+const L1 = new Libro("El relato de un naufrago", "pepito", "230" );
+const L2 = new Libro("El Principito", "Jorge", "180" );
+const L3 = new Libro("El Programador", "Lucia", "430" );
+
+//Accedo al get 
+
+console.log(L1.titulo);
+console.log(L2.titulo);
+console.log(L3.titulo);
+
+// cambiar el nombre del autor
+
+L1.autor = "Carlor";
+L2.autor = "Pablo";
+L3.autor = "Ana";
+
+
+// llamo la constante del libro
+
+L1.mostrarInfo();
+L2.mostrarInfo();
+L3.mostrarInfo();
+
+*/
+
+        //Ejercicio desarrollo en clase.
+
+
+class Pruducto{
+
+  //atrubutos estan privados
+  constructor(nombre,precio,cantida){
+    this._nombre = nombre;
+    this._precio = precio;
+    this._cantida = cantida;
+  }
+get nombre(){
+  return this._nombre;
+}
+
+set nombre(nombre){
+  this._nombre = nombre;
+}
+
+get precio(){
+  return this._precio;
+}
+
+set precio(precio){
+  this._precio = precio;
+}
+
+get cantida(){
+  return this._cantida;
+}
+
+set cantida(cantida){
+  this._cantida = cantida;
+}
+
+//crear el metodo 
+mostrarNombreProducto(){
+  console.log(`El nombre del producto es: ${this._nombre}, el costo es : ${this._precio}, y la cantidad es de: ${this._cantida}`);
+}
+//metodo valor total de stak 
+valorTotal(){
+  return this._precio * this._cantida;
+}
+//metodo para la cantidad del pruducto no 0
+
+modificarCantidad(nuevoCantidad){
+
+  this._cantida=nuevoCantidad;
+
+  console.log(`la nueva cantidad es: ${this._cantida}`);
+          
+  }
+
+}
+
+//objeto de clase
+
+const prod1 = new Pruducto("mause", 45000, 5);
+const prod2 = new Pruducto("Monitor", 1450000, 3);
+
+prod1.mostrarNombreProducto();
+prod2.mostrarNombreProducto();
+
+
+//segundo metodo valor total
+
+console.log(`El valor del pruducto 1 es : ${prod1.valorTotal()}`);
+console.log(`El valor del pruducto 2 es : ${prod2.valorTotal()}`);
+
+//cambiar la cantidad del pruducto
+
+prod1.modificarCantidad(8);
+prod2.modificarCantidad(6);
+
+prod1.mostrarNombreProducto();
+prod2.mostrarNombreProducto();
+
+console.log(`El  Valor del pruducot 1 es : ${prod1.valorTotal()}`);
+console.log(`El  Valor del pruducot 2 es : ${prod2.valorTotal()}`);
+
+
