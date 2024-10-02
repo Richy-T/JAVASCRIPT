@@ -1299,7 +1299,7 @@ per2.saludar();
 */
 
 
-        // Martes 0110-24
+        // Martes 01-10-24
 
 /*
 class Libro{
@@ -1369,6 +1369,7 @@ L3.mostrarInfo();
         //Ejercicio desarrollo en clase.
 
 
+/*
 class Pruducto{
 
   //atrubutos estan privados
@@ -1446,4 +1447,144 @@ prod2.mostrarNombreProducto();
 console.log(`El  Valor del pruducot 1 es : ${prod1.valorTotal()}`);
 console.log(`El  Valor del pruducot 2 es : ${prod2.valorTotal()}`);
 
+*/
+          
 
+                          //Miércoles 2-10-24
+//parte 2 Miercoles 2-10-24 (se tomo el mismo codigo para hacer las adecuaciones del ejercicio)
+      //Mejorando el codigo anterior de pruducto
+
+      class Producto{
+
+        //Los atributos estan privados
+        constructor(nombre,precio,cantida){
+          this._nombre = nombre;
+          this._precio = precio;
+          this._cantida = cantida;
+        }
+      get nombre(){
+        return this._nombre;
+      }
+      
+      set nombre(nombre){
+        this._nombre = nombre;
+      }
+      
+      get precio(){
+        return this._precio;
+      }
+      
+      set precio(precio){
+        this._precio = precio;
+      }
+      
+      get cantida(){
+        return this._cantida;
+      }
+      
+      set cantida(cantida){
+        this._cantida = cantida;
+      }
+      
+      //crear el metodo 
+      mostrarNombreProducto(){
+        console.log(`El nombre del producto es: ${this._nombre}, el costo es : ${this._precio}, y la cantidad es de: ${this._cantida}`);
+      }
+      //metodo valor total de stak 
+      valorTotal(){
+        return this._precio * this._cantida;
+      }
+      //metodo para la cantidad del pruducto no 0
+      
+      modificarCantidad(nuevoCantidad){
+      
+        this._cantida = nuevoCantidad;
+      
+        console.log(`la nueva cantidad es: ${this._cantida}`);
+                
+        }
+//Miércoles 2
+
+//este es el metodo para pro3
+anadirStock(nuevaCantidad){     //quitar o disminuir 
+
+  return this._cantida += nuevaCantidad;
+}
+venderStock(nuevaCantidad){
+  this._cantida -= nuevaCantidad;
+}
+
+operacion(){
+
+  let nCantidad;
+     nCantidad = parseFloat(prompt(`Ingrese la nueva cantidad`));
+
+      let op = parseInt(prompt("ingrese que tipo de operación que desea realiar:  1. Sumar 2. Restar"));
+      
+      if(op===1){
+        console.log(prod3.anadirStock(nCantidad));
+
+      }else{
+        console.log(prod3.venderStock(nCantidad));
+      }
+}
+
+static crearProducto(){
+  
+let productos;
+let precios;
+let cantidades;
+
+//el objeto lo inicia el cliente
+
+productos = prompt(`ingrese el nombre del producto`);
+precios = parseFloat(prompt(`ingrese el precio del producto`));
+cantidades = parseFloat(prompt(`ingrese la cantidad del producto`));
+
+return new Producto(productos, precios, cantidades);
+}
+
+      
+      }
+
+      // usuario coloca los ddatos, 
+      
+      //objeto de clase (espacio en memoria)
+      
+      const prod1 = new Producto("mause", 45000, 5);
+      const prod2 = new Producto("Monitor", 1450000, 3);
+
+      const prod3 = Producto.crearProducto();
+                             
+      
+      
+      prod1.mostrarNombreProducto(); //El metodo es mosrarNombrePruducto()
+      prod2.mostrarNombreProducto();
+      prod3.mostrarNombreProducto();
+      
+      
+      //segundo metodo valor total
+      
+      console.log(`El valor del pruducto 1 es : ${prod1.valorTotal()}`);
+      console.log(`El valor del pruducto 2 es : ${prod2.valorTotal()}`);
+      console.log(`El valor del pruducto 3 es : ${prod3.valorTotal()}`);
+      
+        
+      prod3.operacion();
+
+      //cambiar la cantidad del pruducto
+     
+      prod1.modificarCantidad(8);
+      prod2.modificarCantidad(6);
+     
+      // prod3.modificarCantidad(nCantidad);
+      
+      prod1.mostrarNombreProducto();
+      prod2.mostrarNombreProducto();
+      prod3.mostrarNombreProducto();
+      
+      console.log(`El  Valor del pruducot 1 es : ${prod1.valorTotal()}`);
+      console.log(`El  Valor del pruducot 2 es : ${prod2.valorTotal()}`);
+      console.log(`El  Valor del pruducot 3 es : ${prod3.valorTotal()}`);
+      
+      
