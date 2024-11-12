@@ -1454,6 +1454,8 @@ console.log(`El  Valor del pruducot 2 es : ${prod2.valorTotal()}`);
 //parte 2 Miercoles 2-10-24 (se tomo el mismo codigo para hacer las adecuaciones del ejercicio)
       //Mejorando el codigo anterior de pruducto
 
+
+      /*
       class Producto{
 
         //Los atributos estan privados
@@ -1535,6 +1537,24 @@ let productos;
 let precios;
 let cantidades;
 
+
+//jueves 3-10-24 (do y do while =hacer mientras)
+
+do{
+  productos = prompt('Ingrese el nombre del producto');
+  }while(!productos);
+
+  do{
+    precios = parseFloat(prompt(`Ingrese el precio del prdofucto`));
+     }while(isNaN(precios) || precios <= 0);
+
+     do{
+      cantidades = parseFloat(prompt(`Ingrse la cantidad del producto`));
+       }while (isNaN(cantidades) || cantidades <= 0);
+      
+       return new Producto(productos, precios, cantidades);
+  
+
 //el objeto lo inicia el cliente
 
 productos = prompt(`ingrese el nombre del producto`);
@@ -1587,4 +1607,145 @@ return new Producto(productos, precios, cantidades);
       console.log(`El  Valor del pruducot 2 es : ${prod2.valorTotal()}`);
       console.log(`El  Valor del pruducot 3 es : ${prod3.valorTotal()}`);
       
-      
+*/
+      // Ejercicio en Clase Jueves 3-10-24
+
+/*
+class Termostato {
+
+  constructor(temperatura,estado,encendido, apagado){
+    this._temperatura = temperatura;
+    this._estado = estado;
+    this._encendido = encendido;
+    this._apagado = apagado;
+  }
+
+  get temperatura(){
+    return temperatura;
+  }
+  
+  set temperatura(temperatura){
+    this._temperatura = temperatura;
+  }
+
+  get estado(){
+    return estado;
+  }
+  
+  set estado(estado){
+    this._estado = estado;
+  }
+
+  get encendido(){
+    return this._encendido;
+  }
+  
+  set encendido(encendido){
+    this._encendido = encendido;
+  }
+  
+  get apagado(){
+    return this._apagado;
+  }
+  
+  set apagado(apagado){
+    this._apagado = apagado;
+  }
+
+}
+
+*/
+
+              //Viernes 4-10-24 Repaso con Profesor Fabian
+
+
+class Cuenta {
+  constructor() {
+
+          //La cantidad de cuentas a crear (new Array (2))
+    this._cuentas = new Array(2); //Array para almacenar quentas de los usuarios.
+    this._saldos = new Array (2); //Arrary para almacenar saldos de las cuentas
+    
+  }
+      //metodos setters y getters
+
+ setCuenta(index, cuenta){
+    this._cuentas[index] = cuenta;
+ }  
+
+ getCuenta(index){
+  return this._cuentas[index];
+
+ }
+
+ setSaldo(index, saldo){
+      this._saldos[index] = saldo;
+ }
+
+ getSaldo(index){
+  return this._saldos[index];
+
+ }
+      //implementar el metodo
+ crearCuenta(){
+
+  for(let i = 0; i < this._cuentas.length; i++ ){
+  
+    let cuenta =prompt(`Ingresa tu Nuevo numero de cuenta: ${i+1}`)
+    let saldo = parseFloat(prompt(`ingrese el saldo para la nueva   Cuenta: ${cuenta}`)) ;
+
+    this.setCuenta(i, cuenta);
+    this.setSaldo(i, saldo);  
+    }
+
+ }
+
+ consultarSaldo(){
+  let cuenta = prompt(`ingrese el nuevo numero de cuenta a consultar su saldo: `)
+  let index = this._cuentas.indexOf(cuenta); //Busca el indece del valor como arugumento.
+  if (index !== -1){
+      alert(`El saldo de la cuenta : ${cuenta} es de: ${this.getSaldo(index)}`);
+  }else{
+    alert("Cuenta no fue encontrada.");
+  }
+
+ }
+
+}
+//Creando el objeto
+
+const cuenta = new Cuenta();
+//menu interactivo con el usuario
+
+let opcion;
+do{
+  opcion = parseInt(prompt(`**** MENU CAJERO BANCAYA ****\n1: Crear cuentas \n2: Consultar Saldos \n3: Consignaciones \n4: Retiros \n5: Salir`));
+  switch (opcion) {
+    case 1:
+        cuenta.crearCuenta();      
+      break;
+
+    case 2:
+      cuenta.consultarSaldo();      
+
+    break;
+
+    case 3:
+
+    break;
+
+    case 4:
+
+    break;
+
+    case 5:
+
+    break;
+  
+    default:
+      alert("Opcion invalida intente nuevamente")
+      break;
+  }
+}while (opcion !==5)
+  
+
